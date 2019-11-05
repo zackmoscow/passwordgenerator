@@ -28,8 +28,7 @@ build base html via bootstrap components
 
 
 ## deployed URL
-
-
+https://zackmoscow.github.io/passwordgenerator/
 
 
 
