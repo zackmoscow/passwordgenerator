@@ -6,3 +6,13 @@ var uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"
 
 var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+function generateFunction() {
+    document.getElementById("test").innerHTML = "PASSWORD PLACEHOLDER";
+}
+
+function copyToClipboard() {
+    var copyText = document.getElementById("test");
+    copyText.select();
+    document.execCommand("copy")
+    alert("Copied")
+}
