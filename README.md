@@ -18,9 +18,13 @@ build base html via bootstrap components
 ## js execution
 1. define character arrays
 2. generate password function
-    a. "if/else if" tree to build password array based on 16 possible checkbox combinations, including displaying an alert if user input isn't valid
-    b. for loop to generate password based on slider length value
-    c. print generated password back to html textarea
+
+a. "if/else if" tree to build password array based on 16 possible checkbox combinations, including displaying an alert if user input isn't valid
+    
+b. for loop to generate password based on slider length value
+   
+c. print generated password back to html textarea
+
 3. copy to clipboard function
 
 ## screenshot
