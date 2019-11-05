@@ -29,7 +29,7 @@ c. print generated password back to html textarea
 
 ## screenshot
 
-
+![image](https://user-images.githubusercontent.com/56355506/68250829-69426d00-ffe7-11e9-92d1-14b710e147fe.png)
 
 ## deployed URL
 https://zackmoscow.github.io/passwordgenerator/
