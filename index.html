@@ -24,31 +24,31 @@
         <form>
             <div class="form-group">
               <label for="formControlRange">Password Length</label>
-              <input type="range" class="form-control-range" id="passwordLength">
+              <input type="range" class="custom-range" min="8" max="128" id="passwordLength">
               <small id="lengthHelp" class="form-text text-muted">Password length must be between 8 and 128 characters.</small>
             </div>
             <br>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="specialCharacters">
-              <label class="form-check-label" for="specialCharacters">
+              <input class="form-check-input" type="checkbox" value="" id="includeSpecialCharacters">
+              <label class="form-check-label" for="includeSpecialCharacters">
                     Special Characters
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="numericCharacters">
-              <label class="form-check-label" for="numericCharacters">
+              <input class="form-check-input" type="checkbox" value="" id="includeNumericCharacters">
+              <label class="form-check-label" for="includeNumericCharacters">
                     Numeric Characters
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="uppercaseCharacters">
-              <label class="form-check-label" for="uppercaseCharacters">
+              <input class="form-check-input" type="checkbox" value="" id="includeUppercaseCharacters">
+              <label class="form-check-label" for="includeUppercaseCharacters">
                     Uppercase Characters
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="lowercaseCharacters">
-              <label class="form-check-label" for="lowercaseCharacters">
+              <input class="form-check-input" type="checkbox" value="" id="includeLowercaseCharacters">
+              <label class="form-check-label" for="includeLowercaseCharacters">
                     Lowercase Characters
               </label>
             </div>
