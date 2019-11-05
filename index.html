@@ -4,22 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="javascript.js"></script>
     <title>Password Generator</title>
   </head>
   <body>
-    <header>
-      <h1>Password Generator</h1>
-    </header>
-    <h2>Generate a Password</h2>
-    <textarea
-      readonly
-      id="password"
-      placeholder="Your Secure Password"
-      aria-label="Generated Password"
-    ></textarea>
-    <button id="generate">Generate Password</button>
-    <button id="copy">
-      Copy to Clipboard
-    </button>
+    <div class="container-fluid">
+
+      <h1 class="text-center">Password Generator</h1>
+
+      <br>
+
+      <div class="container">
+
+        <h2>Generate A Password</h2>
+
+        <br>
+
+        <form>
+            <div class="form-group">
+              <label for="formControlRange">Password Length</label>
+              <input type="range" class="form-control-range" id="passwordLength">
+              <small id="lengthHelp" class="form-text text-muted">Password length must be between 8 and 128 characters.</small>
+            </div>
+            <br>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="specialCharacters">
+              <label class="form-check-label" for="specialCharacters">
+                    Special Characters
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="numericCharacters">
+              <label class="form-check-label" for="numericCharacters">
+                    Numeric Characters
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="uppercaseCharacters">
+              <label class="form-check-label" for="uppercaseCharacters">
+                    Uppercase Characters
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="lowercaseCharacters">
+              <label class="form-check-label" for="lowercaseCharacters">
+                    Lowercase Characters
+              </label>
+            </div>
+            <small id="characterHelp" class="form-text text-muted">Passwords must include at least one of the above character types.</small>
+
+          </form>
+
+      </div>
+
+      <br>
+
+      <div class="container">
+        <form>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Your Password Will Be Displayed Below!</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+          </div>
+        </form>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Generate Password</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block">Copy to Clipboard</button>
+      </div>
+    </div>
+
   </body>
 </html>
