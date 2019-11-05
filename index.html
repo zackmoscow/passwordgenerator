@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript" src="script.js"></script>
     <title>Password Generator</title>
   </head>
   <body>
     <div class="container-fluid">
-
-      <h1 class="text-center">Password Generator</h1>
-
+      <div class="container bg-primary mt-2 pt-1 pb-2 rounded">
+        <h1 class="text-center mt-3 text-white">Zack's Password Utility</h1>
+      </div>
       <br>
-
-      <div class="container">
-
-        <h2>Generate A Password</h2>
-
+      <div class="container bg-light pt-3 pb-3 rounded">
+        <h2>Generate Your Password</h2>
         <br>
-
         <form>
             <div class="form-group">
               <label for="formControlRange">Password Length</label>
@@ -52,23 +47,19 @@
                     Lowercase Characters
               </label>
             </div>
-            <small id="characterHelp" class="form-text text-muted">Passwords must include at least one of the above character types.</small>
-
+            <small id="characterHelp" class="form-text text-muted">Passwords must include <b>at least one</b> of the above character types.</small>
           </form>
-
       </div>
-
-      <br>
-
       <div class="container">
         <div class="container">
-            <label>Your Password Will Be Displayed Below!</label>
-            <textarea class="form-control" id="test"></textarea>
+            <label></label>
+            <textarea class="form-control" id="passwordArea">Push Generate Password Button</textarea>
         </div>
         <br>
         <button type="button" class="btn btn-primary btn-lg btn-block" onclick="generateFunction()" >Generate Password</button>
         <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="copyToClipboard()">Copy to Clipboard</button>
       </div>
     </div>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
