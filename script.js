@@ -1,10 +1,9 @@
-var specialCharacters = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
-
-var numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-
-var uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
-var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var characters = {
+    special: ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"],
+    numeric: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    uppercase: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+    lowercase: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+}
 
 function generateFunction() {
 
@@ -13,37 +12,37 @@ function generateFunction() {
     if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === false){
         alert("You must select at least one character type.");
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === true){
-        var passwordCharacters = lowercaseCharacters;
+        var passwordCharacters = characters.lowercase;
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === true && includeLowercaseCharacters.checked === false){
-        var passwordCharacters = uppercaseCharacters;
+        var passwordCharacters = characters.uppercase;
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === false){
-        var passwordCharacters = numericCharacters;
+        var passwordCharacters = characters.numeric;
     } else if (includeSpecialCharacters.checked === true && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === false){
-        var passwordCharacters = specialCharacters;
+        var passwordCharacters = characters.special;
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === true && includeLowercaseCharacters.checked === true){
-        var passwordCharacters = lowercaseCharacters.concat(uppercaseCharacters);
+        var passwordCharacters = characters.lowercase.concat(characters.uppercase);
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === true){
-        var passwordCharacters = lowercaseCharacters.concat(numericCharacters);
+        var passwordCharacters = characters.lowercase.concat(characters.numeric);
     } else if (includeSpecialCharacters.checked === true && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === true){
-        var passwordCharacters = lowercaseCharacters.concat(specialCharacters);
+        var passwordCharacters = characters.lowercase.concat(characters.special);
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === true && includeLowercaseCharacters.checked === false){
-        var passwordCharacters = numericCharacters.concat(uppercaseCharacters);
+        var passwordCharacters = characters.numeric.concat(characters.uppercase);
     } else if (includeSpecialCharacters.checked === true && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === true && includeLowercaseCharacters.checked === false){
-        var passwordCharacters = specialCharacters.concat(uppercaseCharacters);
+        var passwordCharacters = characters.special.concat(characters.uppercase);
     } else if (includeSpecialCharacters.checked === true && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === false){
-        var passwordCharacters = numericCharacters.concat(specialCharacters);
+        var passwordCharacters = characters.numeric.concat(characters.special);
     } else if (includeSpecialCharacters.checked === true && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === true && includeLowercaseCharacters.checked === false){
-        var passwordCharacters = numericCharacters.concat(specialCharacters, uppercaseCharacters);
+        var passwordCharacters = characters.numeric.concat(characters.special, characters.uppercase);
     } else if (includeSpecialCharacters.checked === true && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === true){
-        var passwordCharacters = numericCharacters.concat(specialCharacters, lowercaseCharacters);
+        var passwordCharacters = characters.numeric.concat(characters.special, characters.lowercase);
     } else if (includeSpecialCharacters.checked === true && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === true && includeLowercaseCharacters.checked === true){
-        var passwordCharacters = lowercaseCharacters.concat(specialCharacters, uppercaseCharacters);
+        var passwordCharacters = characters.lowercase.concat(characters.special, characters.uppercase);
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === true && includeLowercaseCharacters.checked === true){
-        var passwordCharacters = numericCharacters.concat(lowercaseCharacters, uppercaseCharacters);
+        var passwordCharacters = characters.numeric.concat(characters.lowercase, characters.uppercase);
     } else if (includeSpecialCharacters.checked === true && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === true && includeLowercaseCharacters.checked === false){
-        var passwordCharacters = numericCharacters.concat(specialCharacters, uppercaseCharacters);
+        var passwordCharacters = characters.numeric.concat(characters.special, characters.uppercase);
     } else {
-        var passwordCharacters = numericCharacters.concat(specialCharacters, uppercaseCharacters, lowercaseCharacters);
+        var passwordCharacters = characters.numeric.concat(characters.special, characters.uppercase, characters.lowercase);
     };
 
     for (var i = 1; i <= passwordLength.value; i++){
