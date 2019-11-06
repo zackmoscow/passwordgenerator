@@ -18,7 +18,7 @@ function generateFunction() {
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === false){
         var passwordCharacters = characters.numeric;
     } else if (includeSpecialCharacters.checked === true && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === false){
-        var passwordCharacters = characters.special;
+        var passwordCharacters = characters.special; 
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === false && includeUppercaseCharacters.checked === true && includeLowercaseCharacters.checked === true){
         var passwordCharacters = characters.lowercase.concat(characters.uppercase);
     } else if (includeSpecialCharacters.checked === false && includeNumericCharacters.checked === true && includeUppercaseCharacters.checked === false && includeLowercaseCharacters.checked === true){
