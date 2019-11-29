@@ -1,5 +1,7 @@
 # passwordgenerator
 
+## https://zackmoscow.github.io/passwordgenerator/
+
 ## purpose
 create a password generator with the following parameters:
 1. length between 8 and 128 characters
@@ -31,8 +33,6 @@ c. print generated password back to html textarea
 
 ![image](https://user-images.githubusercontent.com/56355506/68250829-69426d00-ffe7-11e9-92d1-14b710e147fe.png)
 
-## deployed URL
-https://zackmoscow.github.io/passwordgenerator/
 
 
 
